@@ -32,7 +32,7 @@ a {
 
 /* ============ NAVBAR ============ */
 .navbar {
-  width: 100%;
+  width: auto;
   background: var(--cream);
   padding: 28px 5vw;
   display: flex;
