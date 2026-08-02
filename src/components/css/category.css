@@ -1,0 +1,115 @@
+.category-bar {
+  --rose-deep: #5c1527;
+  --gold-soft: #d9b96a;
+  --cream-soft: #f3e6d0;
+  --line-on-rose: rgba(243, 230, 208, 0.16);
+
+  width: 100%;
+  background: var(--rose-deep);
+  border-top: 1px solid var(--line-on-rose);
+}
+
+.category-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.category-list::-webkit-scrollbar {
+  display: none;
+}
+
+.category-list li {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.category-list li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 14px;
+  background: var(--line-on-rose);
+}
+
+.category-btn {
+  background: transparent;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+
+  display: inline-block;
+  padding: 22px 20px;
+  font-size: 13px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--cream-soft);
+  font-weight: 400;
+  text-decoration: none;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.category-btn::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 14px;
+  height: 1px;
+  background: var(--gold-soft);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s ease;
+}
+
+.category-btn:hover,
+.category-btn.active {
+  color: var(--gold-soft);
+}
+
+.category-btn:hover::after,
+.category-btn.active::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 900px) {
+  .category-btn {
+    padding: 18px 16px;
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 560px) {
+  .category-list {
+    justify-content: flex-start;
+    scroll-snap-type: x proximity;
+  }
+
+  .category-list li {
+    scroll-snap-align: start;
+  }
+
+  .category-btn {
+    padding: 16px 14px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .category-btn::after {
+    left: 18px;
+    right: 18px;
+    bottom: 10px;
+  }
+}
