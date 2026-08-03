@@ -2,11 +2,11 @@ import React from 'react'
 import './css/category.css'
 
 const categories = [
-  { label: 'All', key: 'all' },
-  { label: 'Bracelet', key: 'bracelet' },
-  { label: 'Pendant', key: 'pendant' },
-  { label: 'Ear Rings', key: 'earrings' },
-  { label: 'Kashmiri Watches', key: 'watches' },
+  { label: 'all', key: 'all' },
+  { label: 'bracelet', key: 'bracelet' },
+  { label: 'PENDANT', key: 'neckpiece' },
+  { label: 'earring', key: 'earrings' },
+  { label: 'Kashmiri Watches', key: 'watch' },
   { label: 'Tulip Bracelet', key: 'tulip' },
 ]
 
