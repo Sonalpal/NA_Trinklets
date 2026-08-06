@@ -165,9 +165,9 @@ const products = [
     category: "earrings",
   }, {
     id: 28,
-    price: "₹699",
+    price: "₹49",
     img: "assets/earrings/two_bracelets.jpeg",
-    category: "earrings",
+    category: "bracelets",
   }
 ];
 

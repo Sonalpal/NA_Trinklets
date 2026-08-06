@@ -8,6 +8,7 @@ const categories = [
   { label: 'earring', key: 'earrings' },
   { label: 'Kashmiri Watches', key: 'watch' },
   { label: 'Tulip Bracelet', key: 'tulip' },
+  { label:'Kashmiri earrings', key: 'kashmiri earrings' }
 ]
 
 const Category = ({ active, onSelect }) => {
